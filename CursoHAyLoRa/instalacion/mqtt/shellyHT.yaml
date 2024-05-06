@@ -1,0 +1,21 @@
+# Shelly MQTT
+sensor:
+  - platform: mqtt
+    name: "Shelly H&T Temperatura"
+    state_topic: "shellyhtg3/events/rpc"
+    value_template: "{{ value_json.params['temperature:0'].tC }}"
+    device_class: temperature
+    unit_of_measurement: "ºC"
+  - platform: mqtt
+    name: "Shelly H&T Bateria"
+    state_topic: "shellyhtg3/events/rpc"
+    value_template: "{{ value_json.params['devicepower:0'].battery.percent }}"
+    device_class: battery
+    unit_of_measurement: "%"
+  - platform: mqtt
+    name: Humedad
+    state_topic: "shellyhtg3/events/rpc"
+    value_template: "{{ value_json.params['humidity:0'].rh }}"
+    device_class: humidity
+    unit_of_measurement: "%"
+

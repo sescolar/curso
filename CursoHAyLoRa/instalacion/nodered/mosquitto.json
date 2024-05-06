@@ -1,0 +1,88 @@
+[
+    {
+        "id": "8def41d5f34b8ab3",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b9a8da4acd6e0af6",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "172.18.0.6",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "e614e051d0932b51",
+        "type": "mqtt out",
+        "z": "8def41d5f34b8ab3",
+        "name": "",
+        "topic": "/topic/nodered",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b9a8da4acd6e0af6",
+        "x": 700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "5265dd36cfd20116",
+        "type": "inject",
+        "z": "8def41d5f34b8ab3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "e614e051d0932b51"
+            ]
+        ]
+    }
+]

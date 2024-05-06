@@ -1,0 +1,12 @@
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: 12345678
+      MARIADB_DATABASE: homeassistant
+      MARIADB_USER: homeassistant
+      MARIADB_PASSWORD: 12345678
+    volumes:  
+      - /docker/mariadb:/var/lib/mysql  
+    ports:
+      - "3306:3306" 

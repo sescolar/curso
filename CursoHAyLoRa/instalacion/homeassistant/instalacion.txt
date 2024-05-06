@@ -1,0 +1,8 @@
+   31  uname -a
+   32  sudo apt-get update
+   33  sudo apt-get upgrade
+   34  curl -fsSL https://get.docker.com -o get-docker.sh
+   35  ls
+   36  sh get-docker.sh 
+   37  history 
+

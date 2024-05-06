@@ -1,0 +1,9 @@
+  node-red:
+    image: nodered/node-red:latest
+    environment: 
+      - TZ=Europe/Madrid
+    ports:
+      - "1880:1880"
+    volumes:
+      - /docker/nodered:/data
+        
