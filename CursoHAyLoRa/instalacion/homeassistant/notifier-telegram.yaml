@@ -1,0 +1,5 @@
+# Notifier
+notify:
+  - platform: telegram
+    name: "@SmartHA_2_Bot"
+    chat_id: 962648591
