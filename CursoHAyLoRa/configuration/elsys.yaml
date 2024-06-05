@@ -1,0 +1,19 @@
+# ERS CO2 
+elsys:
+air_quality:
+  - platform: co2_lw
+    id: a81758fffe06a0bb
+    name: A1.2 
+    # Aula A1.2
+  - platform: co2_lw
+    id: a81758fffe06a0ba 
+    name: A2.1
+    # Aula 2.1
+  - platform: co2_lw
+    id: a81758fffe06a0b8 
+    name: A1.1
+    # Aula A1.1
+  - platform: co2_lw
+    id: a81758fffe06a0b9
+    name: A2.2
+    # Aula A2.2
