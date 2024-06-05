@@ -1,0 +1,73 @@
+title: Smart CIFP VG
+views:
+  - path: default_view
+    title: Calendar
+    cards:
+      - type: calendar
+        entities:
+          - calendar.mi_calendario
+      - type: map
+        entities:
+          - entity: zone.home
+    icon: mdi:calendar
+  - title: Aulas
+    path: aulas
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.shelly_h_t_bateria
+          - entity: sensor.shelly_h_t_humedad
+          - entity: sensor.shelly_h_t_temperatura
+        title: Shelly HT MQTT
+        state_color: true
+      - type: entities
+        entities:
+          - entity: sensor.shellybutton1_98cdac1dfd01_battery
+        title: 'Shelly Button '
+        state_color: true
+    icon: mdi:office-building
+  - icon: mdi:weather-cloudy
+    path: meteo
+    title: Meteo
+    cards:
+      - type: weather-forecast
+        entity: weather.aemet
+        show_forecast: false
+      - type: entities
+        entities:
+          - entity: weather.aemet
+          - entity: sensor.aemet_condition
+          - entity: sensor.aemet_pressure
+          - entity: sensor.aemet_rain
+        title: 'AEMET '
+        state_color: true
+      - type: entities
+        entities:
+          - sensor.aemet_condition
+          - sensor.aemet_daily_forecast_condition
+          - sensor.aemet_daily_forecast_precipitation_probability
+          - sensor.aemet_daily_forecast_temperature
+          - sensor.aemet_daily_forecast_temperature_low
+          - sensor.aemet_daily_forecast_time
+          - sensor.aemet_daily_forecast_wind_bearing
+          - sensor.aemet_daily_forecast_wind_speed
+          - sensor.aemet_humidity
+          - sensor.aemet_pressure
+          - sensor.aemet_rain
+          - sensor.aemet_rain_probability
+          - sensor.aemet_snow
+          - sensor.aemet_snow_probability
+          - sensor.aemet_station_id
+          - sensor.aemet_station_name
+          - sensor.aemet_station_timestamp
+          - sensor.aemet_storm_probability
+          - sensor.aemet_temperature
+          - sensor.aemet_temperature_feeling
+          - sensor.aemet_town_id
+          - sensor.aemet_town_name
+          - sensor.aemet_town_timestamp
+          - sensor.aemet_wind_bearing
+          - sensor.aemet_wind_max_speed
+          - sensor.aemet_wind_speed
+        title: AEMET
+
