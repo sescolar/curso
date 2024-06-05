@@ -1,0 +1,9 @@
+{
+    "domain": "co2_lw",
+    "name": "ELSYS ERSCO2 Chirpstack client",
+    "version" : "0.1",
+    "documentation": "https://github.com/home-assistant/example-custom-config/tree/master/custom_components/expose_service_sync/",
+    "dependencies": ["mqtt"],
+    "codeowners": [],
+    "requirements": []
+}
