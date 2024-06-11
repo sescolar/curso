@@ -1,0 +1,4 @@
+service: notify.smartha_2_bot
+data:
+  message: The garage door has been open for 10 minutes.
+  title: garage
