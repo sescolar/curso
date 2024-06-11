@@ -1,0 +1,28 @@
+close_building:
+  alias: "Cierre de Edificio"
+  sequence:
+    # Cambiar las bombillas a amarillo
+    - service: light.turn_on
+      target:
+        entity_id: light.shelly_rgb_bulbs
+      data:
+        color_name: "yellow"
+    - delay: "00:00:05"  # Espera de 5 segundos
+
+    # Cambiar las bombillas a azul
+    - service: light.turn_on
+      target:
+        entity_id: light.shelly_rgb_bulbs
+      data:
+        color_name: "blue"
+    - delay: "00:00:05"  # Espera de 5 segundos
+
+    # Apagar las bombillas
+    - service: light.turn_off
+      target:
+        entity_id: light.shelly_rgb_bulbs
+
+    # Apagar las electroválvulas
+    - service: switch.turn_off
+      target:
+        entity_id: switch.shelly_valves
